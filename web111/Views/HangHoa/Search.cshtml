@@ -1,0 +1,33 @@
+﻿@model IEnumerable<web111.ViewModels.HangHoaVM>
+@{
+    ViewData["Title"] = "Search";
+    Layout = "_DanhSachHangHoa";
+}
+
+@section BreadCum {
+    <div class="banner">
+        <h1>Tìm kiếm</h1>
+    </div>
+}
+<h6>có @Model.Count() sản phẩm</h6>
+<!--Item-->
+@foreach (var item in Model)
+{
+  
+
+    <div class="col-4 custom-margin">
+
+        <div class="card position-relative">
+            <div class="tag">@item.TenLoai</div>
+            <img src="https://cms.imgworlds.com/assets/a5366382-0c26-4726-9873-45d69d24f819.jpg?key=home-gallery" class="card-img-top" alt="">
+            <div class="card-body">
+
+                <h5 class="card-title">@item.TenHH</h5>
+                <p class="card-text">Giá: @item.DonGia</p>
+                <a href="#" class="btn btn-primary">Thêm sản phẩm</a>
+            </div>
+        </div>
+
+
+    </div>
+}

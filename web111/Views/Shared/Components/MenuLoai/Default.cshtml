@@ -1,0 +1,29 @@
+﻿@model IEnumerable<web111.ViewModels.MenuLoaiVM>
+
+<div class="col-md-3 mb-4">
+    <h4>Danh mục</h4>
+
+    <div class="search-container" style="margin: 20px;">
+        <div class="input-group">
+            <form asp-action="Search" asp-controller="HangHoa">
+                <input type="text" class="form-control" placeholder="Tìm kiếm..." aria-label="Tìm kiếm" name="query">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="submit">
+                        
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <ul class="list-unstyled fruit-categories">
+        @foreach (var item in Model)
+        {
+            <li class="d-flex justify-content-between">
+                <a asp-controller="HangHoa" asp-action="Index" asp-route-loai="@item.MaLoai">@item.TenLoai</a>
+                <span>(@item.SoLuong)</span>
+            </li>
+        }
+    </ul>
+</div>

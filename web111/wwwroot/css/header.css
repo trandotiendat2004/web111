@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+#header {
+    background-color: #1d1a1a;
+    width: 100%;
+    padding:0px 30px;
+    margin-top:33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+ }
+
+ #menu {
+    
+    display: flex;
+    justify-content: center;
+}
+
+#menu .item a {
+    margin:0px 25px;
+    color:#e79821;
+    text-decoration: none; /* bỏ dấu gạch chân */ 
+
+}
